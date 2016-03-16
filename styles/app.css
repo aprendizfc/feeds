@@ -1,3 +1,103 @@
 body {
 	background-color: #394C5F;
 }
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.feedWrapper {
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+	top: 68px;
+}
+
+.feedHeader {
+	width: 100%;
+	background-color: #FF6654;
+	height: 76px;
+	border-radius: 10px 10px  0 0;
+}
+
+span.menu {
+	width: 5%;
+	height: 60px;
+	display: inline-block;
+}
+
+span.menu:before {
+  content: '';
+  position: absolute;
+  top: 23px;
+  width: 46px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+span.menu:after {
+  content: '';
+  position: absolute;
+  top: 43px;
+  width: 46px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: white;
+}
+.feedBody {
+	position: fixed;
+	top: 144px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: inherit;
+	margin: 0 auto;
+	padding-top: 26px;
+	background-color: #CDCDCC;
+	overflow-y: scroll;
+}
+
+.cardHeader {
+	width: 100%;
+	margin-bottom: 7px;
+	padding: 15px 0;
+	background-color: white;
+}
+
+.headerContent {
+	position: relative;
+	left: 22px;
+	width: calc(100% - 22px);
+}
+
+.headerContent > .headerImage {
+	background: url('http://lorempixel.com/60/60/') 50% 50%;
+	position: relative;
+	float: left;
+	width: 60px;
+	height: 60px;
+	display: inline-block;
+	border-radius: 50%;
+}
+
+.headerContent > .headerImage + .headerTitle {
+	position: relative;
+	float: left;
+	left: 28px;
+	line-height: 60px;
+}
+
+.clearfix {
+	clear: both;
+}
+
+
+
+
+
+
+
+
+
