@@ -88,40 +88,77 @@ span.menu:after {
     bottom: 0;
     margin-left: -40%;
     padding-top: 26px;
+    padding-bottom: 90px;
     background-color: #CDCDCC;
     overflow-y: scroll;
 }
 
-.cardHeader {
+.card {
 	width: 100%;
 	margin-bottom: 7px;
-	padding: 15px 0;
-	background-color: white;
 }
 
-.headerContent {
+.cardHeader {
 	position: relative;
-	left: 22px;
-	width: calc(100% - 22px);
+	width: 100%;
+	padding: 15px 0;
+	margin-bottom: 6px;
+	background-color: white;
 	display: inline-block;
 }
 
-.headerContent > .headerImage {
-	/* background: url('http://lorempixel.com/60/60/') 50% 50%; */
+.cardHeader .headerImage {
 	position: relative;
 	float: left;
+	left: 22px;
 	width: 60px;
 	height: 60px;
 	display: inline-block;
 	border-radius: 50%;
 }
 
-.headerContent > .headerImage + .headerTitle {
+.cardHeader .headerTitle {
 	position: relative;
 	float: left;
-	left: 28px;
-	line-height: 60px;
+	left: 46px;
+	width: 60%;
 	font-family: 'Roboto', sans-serif;
+}
+
+.cardContent {
+	width: 100%;
+	display: inline-block;
+	background-color: white;
+}
+
+.contentImage {
+	float: left;
+	margin-right: 37px;
+}
+
+.contentTitle {
+	font-size: 1.3rem;
+	margin: 28px 0 34px 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+.contentNews {
+	width: 90%;
+	text-align: justify;
+	font-weight: 300;
+	line-height: 1.2;
+	font-family: 'Roboto', sans-serif;
+}
+
+.img-responsive {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+.wrapper {
+	display: flex;
+	align-items: center;
 }
 
 .clearfix {
