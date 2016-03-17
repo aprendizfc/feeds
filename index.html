@@ -18,15 +18,22 @@
 		</header>
 		<section class="feedBody" ng-controller="NewsCtrl">
 			<div class="container">
-				<section class="cardHeader" ng-repeat="new in news">
-					<div class="headerContent">
-						<div class="headerImage" ng-style="{'background': 'url({{ new.image }})'}"></div>
-						<h1 class="headerTitle">{{ new.title}}</h1>
-						<div class="clearfix"></div>
-					</div>
-				</section>
+				<section class="card" ng-repeat="new in news">
+					<div class="cardHeader">
+						<div class="wrapper">
+							<div class="headerImage" ng-style="{'background': 'url({{ new.image }}) 50%'}"></div>
+							<h1 class="headerTitle">{{ new.title}}</h1>
+							<div class="clearfix"></div>
+						</div>
+					</div> <!-- end .cardHeader -->
+					<div class="cardContent">
+						<img ng-src="{{new.image}}" class="img-responsive contentImage">
+						<h1 class="contentTitle">{{ new.title }}</h1>
+						<p class="contentNews">{{ new.content }}</p>
+					</div> <!-- end .cardContent -->
+				</section> <!-- end .card -->
 			</div>
-		</section>
+		</section> <!-- end .feedBody -->
 	</section>
 	
 	<script src="scripts/angular.min.js"></script>
