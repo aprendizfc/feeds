@@ -4,10 +4,11 @@
 	<meta charset="UTF-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Feeds</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="styles/reset.css">
 	<link rel="stylesheet" href="styles/app.css">
 </head>
-<body>
+<body ng-app="feedApp">
 	
 	<section class="feedWrapper">
 		<header class="feedHeader">
@@ -15,68 +16,12 @@
 				<span class="menu"></span>
 			</div>
 		</header>
-		<section class="feedBody">
+		<section class="feedBody" ng-controller="NewsCtrl">
 			<div class="container">
-				<section class="cardHeader">
+				<section class="cardHeader" ng-repeat="new in news">
 					<div class="headerContent">
-						<div class="headerImage"></div>
-						<h1 class="headerTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
-						<div class="clearfix"></div>
-					</div>
-				</section>			
-				<section class="cardHeader">
-					<div class="headerContent">
-						<div class="headerImage"></div>
-						<h1 class="headerTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
-						<div class="clearfix"></div>
-					</div>
-				</section>
-				<section class="cardHeader">
-					<div class="headerContent">
-						<div class="headerImage"></div>
-						<h1 class="headerTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
-						<div class="clearfix"></div>
-					</div>
-				</section>
-				<section class="cardHeader">
-					<div class="headerContent">
-						<div class="headerImage"></div>
-						<h1 class="headerTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
-						<div class="clearfix"></div>
-					</div>
-				</section>
-				<section class="cardHeader">
-					<div class="headerContent">
-						<div class="headerImage"></div>
-						<h1 class="headerTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
-						<div class="clearfix"></div>
-					</div>
-				</section>
-				<section class="cardHeader">
-					<div class="headerContent">
-						<div class="headerImage"></div>
-						<h1 class="headerTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
-						<div class="clearfix"></div>
-					</div>
-				</section>
-				<section class="cardHeader">
-					<div class="headerContent">
-						<div class="headerImage"></div>
-						<h1 class="headerTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
-						<div class="clearfix"></div>
-					</div>
-				</section>
-				<section class="cardHeader">
-					<div class="headerContent">
-						<div class="headerImage"></div>
-						<h1 class="headerTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
-						<div class="clearfix"></div>
-					</div>
-				</section>
-				<section class="cardHeader">
-					<div class="headerContent">
-						<div class="headerImage"></div>
-						<h1 class="headerTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
+						<div class="headerImage" ng-style="{'background': 'url({{ new.image }})'}"></div>
+						<h1 class="headerTitle">{{ new.title}}</h1>
 						<div class="clearfix"></div>
 					</div>
 				</section>
@@ -85,5 +30,7 @@
 	</section>
 	
 	<script src="scripts/angular.min.js"></script>
+	<script src="scripts/app.js"></script>
+	<script src="scripts/news.js"></script>
 </body>
 </html>
