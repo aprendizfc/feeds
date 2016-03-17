@@ -1,5 +1,31 @@
+@-moz-keyframes bounce {
+	0% {
+		-moz-transform: translateY(1000px);
+	}
+	75% {
+		-moz-transform: translateY(50px);
+	}
+	100% {
+		-moz-transform: translateY(68px);
+	}
+}
+
+@-webkit-keyframes bounce {
+	0% {
+		-webkit-animation-delay: 2s;
+		-webkit-transform: translateY(1000px);
+	}
+	75% {
+		-webkit-transform: translateY(50px);
+	}
+	100% {
+		-webkit-transform: translateY(68px);
+	}
+}
+
 body {
 	background-color: #394C5F;
+	overflow: hidden;
 }
 
 .container {
@@ -8,17 +34,24 @@ body {
 }
 
 .feedWrapper {
-	width: 80%;
-	margin: 0 auto;
-	position: relative;
-	top: 68px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  top: 0px;
+	-moz-animation: bounce .6s;
+	-moz-transform: translateY(68px);
+	-webkit-animation: bounce .6s;
+	-webkit-transform: translateY(68px);
 }
 
 .feedHeader {
-	width: 100%;
-	background-color: #FF6654;
-	height: 76px;
-	border-radius: 10px 10px  0 0;
+  position: absolute;
+  width: 80%;
+  height: 76px;
+  left: 50%;
+  margin-left: -40%;
+  background-color: #FF6654;
+  border-radius: 10px 10px 0 0;
 }
 
 span.menu {
@@ -46,17 +79,17 @@ span.menu:after {
   border-radius: 10px;
   background-color: white;
 }
+
 .feedBody {
-	position: fixed;
-	top: 144px;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	width: inherit;
-	margin: 0 auto;
-	padding-top: 26px;
-	background-color: #CDCDCC;
-	overflow-y: scroll;
+    position: absolute;
+    width: 80%;
+    top: 76px;
+    left: 50%;
+    bottom: 0;
+    margin-left: -40%;
+    padding-top: 26px;
+    background-color: #CDCDCC;
+    overflow-y: scroll;
 }
 
 .cardHeader {
@@ -70,6 +103,7 @@ span.menu:after {
 	position: relative;
 	left: 22px;
 	width: calc(100% - 22px);
+	display: inline-block;
 }
 
 .headerContent > .headerImage {
