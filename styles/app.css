@@ -107,7 +107,7 @@ span.menu:after {
 }
 
 .headerContent > .headerImage {
-	background: url('http://lorempixel.com/60/60/') 50% 50%;
+	/* background: url('http://lorempixel.com/60/60/') 50% 50%; */
 	position: relative;
 	float: left;
 	width: 60px;
@@ -121,6 +121,7 @@ span.menu:after {
 	float: left;
 	left: 28px;
 	line-height: 60px;
+	font-family: 'Roboto', sans-serif;
 }
 
 .clearfix {
