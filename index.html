@@ -8,15 +8,15 @@
 	<link rel="stylesheet" href="styles/reset.css">
 	<link rel="stylesheet" href="styles/app.css">
 </head>
-<body ng-app="feedApp">
+<body ng-app="feedApp" ng-controller="NewsCtrl">
 	
 	<section class="feedWrapper">
 		<header class="feedHeader">
 			<div class="container">
-				<span class="menu"></span>
+				<span class="menu" ng-click="getNews()"></span>
 			</div>
 		</header>
-		<section class="feedBody" ng-controller="NewsCtrl">
+		<section class="feedBody">
 			<div class="fixedContainer">
 				<section class="card" ng-repeat="new in news">
 					<div class="cardHeader">
