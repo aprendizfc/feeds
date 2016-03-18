@@ -33,6 +33,16 @@ body {
 	margin: 0 auto;
 }
 
+.fixedContainer {
+  position: fixed;
+  width: 72%;
+  left: 50%;
+  margin-left: -36%;
+  top: 102px;
+  bottom: 90px;
+  overflow-y: scroll;
+}
+
 .feedWrapper {
   position: absolute;
   width: 100%;
@@ -90,7 +100,6 @@ span.menu:after {
     padding-top: 26px;
     padding-bottom: 90px;
     background-color: #CDCDCC;
-    overflow-y: scroll;
 }
 
 .card {
