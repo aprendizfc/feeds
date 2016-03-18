@@ -1,4 +1,4 @@
-@-moz-keyframes bounce {
+@-moz-keyframes bounce-y {
 	0% {
 		-moz-transform: translateY(1000px);
 	}
@@ -10,9 +10,18 @@
 	}
 }
 
-@-webkit-keyframes bounce {
+@-moz-keyframes bounce-x {
+  0%   {width: 0%;}
+  30%  {transform: rotate(0.02deg);}
+  50%  {transform: rotate(0deg);}
+  65%  {transform: rotate(0.02deg);}
+  80%  {transform: rotate(0deg);}
+  89%  {transform: rotate(0.02deg);}
+  100% {transform: rotate(0deg); width: 100%;}
+}
+
+@-webkit-keyframes bounce-y {
 	0% {
-		-webkit-animation-delay: 2s;
 		-webkit-transform: translateY(1000px);
 	}
 	75% {
@@ -21,6 +30,16 @@
 	100% {
 		-webkit-transform: translateY(68px);
 	}
+}
+
+@-webkit-keyframes bounce-x {
+  0%   {width: 0%;}
+  30%  {transform: rotate(0.02deg);}
+  50%  {transform: rotate(0deg);}
+  65%  {transform: rotate(0.02deg);}
+  80%  {transform: rotate(0deg);}
+  89%  {transform: rotate(0.02deg);}
+  100% {transform: rotate(0deg); width: 100%;}
 }
 
 body {
@@ -34,11 +53,11 @@ body {
 }
 
 .fixedContainer {
-  position: fixed;
-  width: 72%;
+  position: absolute;
+  width: 90%;
   left: 50%;
-  margin-left: -36%;
-  top: 102px;
+  margin-left: -45%;
+  top: 26px;
   bottom: 90px;
   overflow-y: scroll;
 }
@@ -48,9 +67,9 @@ body {
   width: 100%;
   bottom: 0;
   top: 0px;
-	-moz-animation: bounce .6s;
+	-moz-animation: bounce-y .6s;
 	-moz-transform: translateY(68px);
-	-webkit-animation: bounce .6s;
+	-webkit-animation: bounce-y .6s;
 	-webkit-transform: translateY(68px);
 }
 
@@ -97,14 +116,14 @@ span.menu:after {
     left: 50%;
     bottom: 0;
     margin-left: -40%;
-    padding-top: 26px;
-    padding-bottom: 90px;
     background-color: #CDCDCC;
 }
 
 .card {
 	width: 100%;
 	margin-bottom: 7px;
+	-webkit-animation: bounce-x 1s;
+	-moz-animation: bounce-x 1s;
 }
 
 .cardHeader {
@@ -138,6 +157,8 @@ span.menu:after {
 	width: 100%;
 	display: inline-block;
 	background-color: white;
+	overflow: hidden;
+	height: 0;
 }
 
 .contentImage {
