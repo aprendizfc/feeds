@@ -17,7 +17,7 @@
 			</div>
 		</header>
 		<section class="feedBody" ng-controller="NewsCtrl">
-			<div class="container">
+			<div class="fixedContainer">
 				<section class="card" ng-repeat="new in news">
 					<div class="cardHeader">
 						<div class="wrapper">
@@ -27,7 +27,7 @@
 						</div>
 					</div> <!-- end .cardHeader -->
 					<div class="cardContent">
-						<img ng-src="{{new.image}}" class="img-responsive contentImage">
+						<img ng-src="{{ new.image }}" class="img-responsive contentImage">
 						<h1 class="contentTitle">{{ new.title }}</h1>
 						<p class="contentNews">{{ new.content }}</p>
 					</div> <!-- end .cardContent -->
