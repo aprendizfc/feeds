@@ -155,7 +155,6 @@ span.menu:after {
 
 .cardContent {
 	width: 100%;
-	display: inline-block;
 	background-color: white;
 	overflow: hidden;
 	max-height: 0px;
