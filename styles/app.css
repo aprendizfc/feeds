@@ -158,7 +158,13 @@ span.menu:after {
 	display: inline-block;
 	background-color: white;
 	overflow: hidden;
-	height: 0;
+	max-height: 0px;
+	-webkit-transition: max-height 1s linear;
+	-moz-transition: max-height 1s linear;
+}
+
+.active {
+	max-height: 1000px;
 }
 
 .contentImage {
