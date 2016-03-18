@@ -8,4 +8,13 @@ angular.module('feedApp')
 				console.log(error);
 			});
 		}
+
+		$scope.showNews = function(id) {
+			var $cardContent = $("#" + id);
+			if ( $cardContent.hasClass('active') ) {
+				$cardContent.removeClass('active');
+			} else {
+				$cardContent.addClass('active');
+			}
+		}
 	}])
