@@ -19,14 +19,14 @@
 		<section class="feedBody">
 			<div class="fixedContainer">
 				<section class="card" ng-repeat="new in news">
-					<div class="cardHeader">
+					<div class="cardHeader" ng-click="showNews( new.id )">
 						<div class="wrapper">
 							<div class="headerImage" ng-style="{'background': 'url({{ new.image }}) 50%'}"></div>
 							<h1 class="headerTitle">{{ new.title}}</h1>
 							<div class="clearfix"></div>
 						</div>
 					</div> <!-- end .cardHeader -->
-					<div class="cardContent">
+					<div class="cardContent" id="{{ new.id }}">
 						<img ng-src="{{ new.image }}" class="img-responsive contentImage">
 						<h1 class="contentTitle">{{ new.title }}</h1>
 						<p class="contentNews">{{ new.content }}</p>
@@ -36,8 +36,10 @@
 		</section> <!-- end .feedBody -->
 	</section>
 	
+	<script src="scripts/jquery-1.12.2.js"></script>
 	<script src="scripts/angular.min.js"></script>
 	<script src="scripts/app.js"></script>
 	<script src="scripts/news.js"></script>
+	<script src="scripts/accordion.js"></script>
 </body>
 </html>
