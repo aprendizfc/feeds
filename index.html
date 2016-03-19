@@ -5,6 +5,7 @@
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Feeds</title>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="styles/animate.css">
 	<link rel="stylesheet" href="styles/reset.css">
 	<link rel="stylesheet" href="styles/app.css">
 </head>
@@ -15,6 +16,9 @@
 			<div class="container">
 				<span class="menu" ng-click="getNews()"></span>
 			</div>
+			<div class="titleWrapper">
+				<h1 id="title"></h1>
+			</div>
 		</header>
 		<section class="feedBody">
 			<div class="fixedContainer">
@@ -22,7 +26,7 @@
 					<div class="cardHeader" ng-click="showNews( new.id )">
 						<div class="wrapper">
 							<div class="headerImage" ng-style="{'background': 'url({{ new.image }}) 50%'}"></div>
-							<h1 class="headerTitle">{{ new.title}}</h1>
+							<h1 class="headerTitle {{ new.id }}">{{ new.title}}</h1>
 							<div class="clearfix"></div>
 						</div>
 					</div> <!-- end .cardHeader -->
