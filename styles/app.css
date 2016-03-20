@@ -13,15 +13,17 @@ body {
   top: 0;
   right: 0;
   bottom: 0;
-  left: 102px;
+  left: 12%;
   color: #fff;
+  display: flex;
+  align-items: center;
   overflow: hidden;
 }
 
 #title {
-	position: absolute;
-	top: 40%;
-	left: 59px;
+	position: relative;
+	left: 32px;
+	width: 83%;
 	font-family: 'Roboto', sans-serif;
 }
 
