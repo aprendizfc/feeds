@@ -29,7 +29,7 @@
 								 style="-webkit-animation-delay:{{ $index * 100 }}ms; -moz-animation-delay:{{ $index * 100 }}ms">
 					<div class="cardHeader" ng-click="showNews( new.id )">
 						<div class="wrapper">
-							<div class="headerImage" ng-style="{'background': 'url({{ new.image }}) 50%'}"></div>
+							<img ng-src="{{ new.image }}" class="headerImage" alt="image {{ new.id }}">
 							<h1 class="headerTitle {{ new.id }}">{{ new.title}}</h1>
 							<div class="clearfix"></div>
 						</div>
