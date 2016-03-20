@@ -11,7 +11,7 @@
 </head>
 <body ng-app="feedApp" ng-controller="NewsCtrl">
 	
-	<section class="feedWrapper">
+	<section class="feedWrapper animated bounceInUp">
 		<header class="feedHeader">
 			<div class="container">
 				<span class="menu" ng-click="getNews()"></span>
@@ -22,7 +22,7 @@
 		</header>
 		<section class="feedBody">
 			<div class="fixedContainer">
-				<section class="card" ng-repeat="new in news">
+				<section class="card animated bounceInLeft" ng-repeat="new in news">
 					<div class="cardHeader" ng-click="showNews( new.id )">
 						<div class="wrapper">
 							<div class="headerImage" ng-style="{'background': 'url({{ new.image }}) 50%'}"></div>
@@ -30,7 +30,7 @@
 							<div class="clearfix"></div>
 						</div>
 					</div> <!-- end .cardHeader -->
-					<div class="cardContent" id="{{ new.id }}">
+					<div class="cardContent animated" id="{{ new.id }}">
 						<img ng-src="{{ new.image }}" class="img-responsive contentImage">
 						<h1 class="contentTitle">{{ new.title }}</h1>
 						<p class="contentNews">{{ new.content }}</p>
