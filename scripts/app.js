@@ -1,5 +1,5 @@
 angular
-	.module('feedApp', [])
+	.module('feedApp', ['ngLoadingSpinner'])
 	.run(function($rootScope) {
 		$rootScope.endpoint = 'news_mock.json';
 	});
