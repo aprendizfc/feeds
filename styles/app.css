@@ -1,47 +1,3 @@
-@-moz-keyframes bounce-y {
-	0% {
-		-moz-transform: translateY(1000px);
-	}
-	75% {
-		-moz-transform: translateY(50px);
-	}
-	100% {
-		-moz-transform: translateY(68px);
-	}
-}
-
-@-moz-keyframes bounce-x {
-  0%   {width: 0%;}
-  30%  {transform: rotate(0.02deg);}
-  50%  {transform: rotate(0deg);}
-  65%  {transform: rotate(0.02deg);}
-  80%  {transform: rotate(0deg);}
-  89%  {transform: rotate(0.02deg);}
-  100% {transform: rotate(0deg); width: 100%;}
-}
-
-@-webkit-keyframes bounce-y {
-	0% {
-		-webkit-transform: translateY(1000px);
-	}
-	75% {
-		-webkit-transform: translateY(50px);
-	}
-	100% {
-		-webkit-transform: translateY(68px);
-	}
-}
-
-@-webkit-keyframes bounce-x {
-  0%   {width: 0%;}
-  30%  {transform: rotate(0.02deg);}
-  50%  {transform: rotate(0deg);}
-  65%  {transform: rotate(0.02deg);}
-  80%  {transform: rotate(0deg);}
-  89%  {transform: rotate(0.02deg);}
-  100% {transform: rotate(0deg); width: 100%;}
-}
-
 body {
 	background-color: #394C5F;
 	overflow: hidden;
@@ -75,7 +31,7 @@ body {
   left: 50%;
   margin-left: -45%;
   top: 26px;
-  bottom: 90px;
+  bottom: 30px;
   overflow-y: scroll;
 }
 
@@ -83,11 +39,7 @@ body {
   position: absolute;
   width: 100%;
   bottom: 0;
-  top: 0px;
-	-moz-animation: bounce-y .6s;
-	-moz-transform: translateY(68px);
-	-webkit-animation: bounce-y .6s;
-	-webkit-transform: translateY(68px);
+  top: 68px;
 }
 
 .feedHeader {
@@ -139,8 +91,6 @@ span.menu:after {
 .card {
 	width: 100%;
 	margin-bottom: 7px;
-	-webkit-animation: bounce-x 1s;
-	-moz-animation: bounce-x 1s;
 }
 
 .cardHeader {
