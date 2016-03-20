@@ -22,7 +22,9 @@
 		</header>
 		<section class="feedBody">
 			<div class="fixedContainer">
-				<section class="card animated bounceInLeft" ng-repeat="new in news">
+				<section class="card animated bounceInLeft"
+								 ng-repeat="new in news"
+								 style="-webkit-animation-delay:{{ $index * 300 }}ms; -moz-animation-delay:{{ $index * 300 }}ms">
 					<div class="cardHeader" ng-click="showNews( new.id )">
 						<div class="wrapper">
 							<div class="headerImage" ng-style="{'background': 'url({{ new.image }}) 50%'}"></div>
