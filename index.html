@@ -10,6 +10,8 @@
 	<link rel="stylesheet" href="styles/app.css">
 </head>
 <body ng-app="feedApp" ng-controller="NewsCtrl">
+
+  <span us-spinner="{radius:26, width:6, length:28, lines:13}"></span>
 	
 	<section class="feedWrapper animated bounceInUp">
 		<header class="feedHeader">
@@ -24,7 +26,7 @@
 			<div class="fixedContainer">
 				<section class="card animated bounceInLeft"
 								 ng-repeat="new in news"
-								 style="-webkit-animation-delay:{{ $index * 300 }}ms; -moz-animation-delay:{{ $index * 300 }}ms">
+								 style="-webkit-animation-delay:{{ $index * 100 }}ms; -moz-animation-delay:{{ $index * 100 }}ms">
 					<div class="cardHeader" ng-click="showNews( new.id )">
 						<div class="wrapper">
 							<div class="headerImage" ng-style="{'background': 'url({{ new.image }}) 50%'}"></div>
@@ -44,6 +46,9 @@
 	
 	<script src="scripts/jquery-1.12.2.js"></script>
 	<script src="scripts/angular.min.js"></script>
+	<script src="scripts/spin.min.js"></script>
+	<script src="scripts/angular-spinner.js"></script>
+	<script src="scripts/angular-loading-spinner.js"></script>
 	<script src="scripts/app.js"></script>
 	<script src="scripts/news.js"></script>
 </body>
