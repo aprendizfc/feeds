@@ -14,9 +14,9 @@ angular.module('feedApp')
 			var $title = $('.' + id).text();
 			if ( $cardContent.hasClass('active') ) {
 				$("#title").text($title).removeClass('bounceInDown').addClass('bounceOutLeft')
-				$cardContent.removeClass('active');
+				$cardContent.removeClass('bounceInDown active').addClass('bounceOutUp');
 			} else {
-				$cardContent.addClass('active');
+				$cardContent.addClass('bounceInDown active').removeClass('bounceOutUp');
 				$("#title").text($title).removeClass('bounceOutLeft').addClass('animated bounceInDown');
 			}
 		}
